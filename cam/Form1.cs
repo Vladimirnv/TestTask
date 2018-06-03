@@ -39,7 +39,7 @@ namespace cam
                 _cameraList.GetCamera(i).Close();
             }
             /*for (int i = 0; i < threads.Count; i++)
-                threads[i].Start();*/
+                threads[i].Start(); */
         }
 
         private void work(PictureBox pb, Camera cam)
