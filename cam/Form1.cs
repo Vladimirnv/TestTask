@@ -10,13 +10,13 @@ using System.Xml;
 
 namespace cam
 {
-    public partial class Form1 : Form
+    public partial class CamReader : Form
     {
         private CameraList _cameraList;
         private List<Thread> threads;
         private List<PictureBox> pic;
 
-        public Form1()
+        public CamReader()
         {
             InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace cam
                 MessageBox.Show("Невозможно получить список камер. Проверьте интернет соединение.");
                 Application.Exit();
             }
-            pic = new List<PictureBox>() { pictureBox1, pictureBox2, pictureBox3, pictureBox4 };
+            pic = new List<PictureBox>() { LTBox, RTBox, LBBox, RBBox };
             for (int i = 0; i < _cameraList.GetCameraNumbers(); i++)
             {
                 //ServerTread.Add(new Thread(() => work(pic[i-1], _cameraList.GetCamera(i-1))));
